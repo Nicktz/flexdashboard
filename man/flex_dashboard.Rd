@@ -4,20 +4,26 @@
 \alias{flex_dashboard}
 \title{R Markdown Format for Flexible Dashboards}
 \usage{
-flex_dashboard(fig_width = 6, fig_height = 4.8, fig_retina = 2,
-  fig_mobile = TRUE, dev = "png", smart = TRUE, self_contained = TRUE,
-  favicon = NULL, logo = NULL, social = NULL, source_code = NULL,
-  navbar = NULL, orientation = c("columns", "rows"),
-  vertical_layout = c("fill", "scroll"), storyboard = FALSE,
-  theme = "default", highlight = "default", mathjax = "default",
+flex_dashboard(Def_html = "default.html", Def_js = "flexdashboard.js",
+  fig_width = 6, fig_height = 4.8, fig_retina = 2,
+  fig_mobile = TRUE, dev = "png", smart = TRUE,
+  self_contained = TRUE, favicon = NULL, logo = NULL,
+  social = NULL, source_code = NULL, navbar = NULL,
+  orientation = c("columns", "rows"), vertical_layout = c("fill",
+  "scroll"), storyboard = FALSE, theme = "default",
+  highlight = "default", mathjax = "default",
   extra_dependencies = NULL, css = NULL, includes = NULL,
   lib_dir = NULL, md_extensions = NULL, pandoc_args = NULL,
-  devel = FALSE, ...)
+  devel = FALSE, resize_reload = TRUE, ...)
 }
 \arguments{
+\item{Def_html}{Default html to use. Add own one here: paste0( find.package("flexdashboard"), "/rmarkdown/templates/flex_dashboard/resources")}
+
+\item{Def_js}{Default js script to use. Add own one here: paste0( find.package("flexdashboard"), "/rmarkdown/templates/flex_dashboard/resources")}
+
 \item{fig_width}{Default width (in inches) for figures}
 
-\item{fig_height}{Default width (in inches) for figures}
+\item{fig_height}{Default height (in inches) for figures}
 
 \item{fig_retina}{Scaling to perform for retina displays (defaults to 2).
 Note that for flexdashboard enabling retina scaling provides for both
@@ -34,14 +40,14 @@ specified width and height.}
 \item{dev}{Graphics device to use for figure output (defaults to png)}
 
 \item{smart}{Produce typographically correct output, converting straight
-quotes to curly quotes, --- to em-dashes, -- to en-dashes, and ... to
-ellipses.}
+quotes to curly quotes, \code{---} to em-dashes, \code{--} to en-dashes, and
+\code{...} to ellipses.}
 
 \item{self_contained}{Produce a standalone HTML file with no external
 dependencies, using data: URIs to incorporate the contents of linked
 scripts, stylesheets, images, and videos. Note that even for self contained
 documents MathJax is still loaded externally (this is necessary because of
-it's size).}
+its size).}
 
 \item{favicon}{Path to graphic to be used as a favicon for the dashboard.
 Pass \code{NULL} to use no favicon.}
@@ -115,6 +121,10 @@ additional details.}
 
 \item{devel}{Enable development mode (used for development of the format
 itself, not useful for users of the format).}
+
+\item{resize_reload}{Disable the auto-reloading behavior when the window is resized.
+Useful when debugging large flexdashboard applications and this functionality
+is not needed.}
 
 \item{...}{Unused}
 }
