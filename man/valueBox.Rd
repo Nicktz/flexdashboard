@@ -4,8 +4,7 @@
 \alias{valueBox}
 \title{Create a value box component for a dashboard.}
 \usage{
-valueBox(value, caption = NULL, icon = NULL, color = NULL,
-  href = NULL)
+valueBox(value, caption = NULL, icon = NULL, color = NULL, href = NULL)
 }
 \arguments{
 \item{value}{The value to display in the box. Usually a number or short text.}

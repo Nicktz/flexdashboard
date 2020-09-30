@@ -4,17 +4,37 @@
 \alias{flex_dashboard}
 \title{R Markdown Format for Flexible Dashboards}
 \usage{
-flex_dashboard(Def_html = "default.html", Def_js = "flexdashboard.js",
-  fig_width = 6, fig_height = 4.8, fig_retina = 2,
-  fig_mobile = TRUE, dev = "png", smart = TRUE,
-  self_contained = TRUE, favicon = NULL, logo = NULL,
-  social = NULL, source_code = NULL, navbar = NULL,
-  orientation = c("columns", "rows"), vertical_layout = c("fill",
-  "scroll"), storyboard = FALSE, theme = "default",
-  highlight = "default", mathjax = "default",
-  extra_dependencies = NULL, css = NULL, includes = NULL,
-  lib_dir = NULL, md_extensions = NULL, pandoc_args = NULL,
-  devel = FALSE, resize_reload = TRUE, ...)
+flex_dashboard(
+  Def_html = "default.html",
+  Def_js = "flexdashboard.js",
+  fig_width = 6,
+  fig_height = 4.8,
+  fig_retina = 2,
+  fig_mobile = TRUE,
+  dev = "png",
+  smart = TRUE,
+  self_contained = TRUE,
+  favicon = NULL,
+  logo = NULL,
+  social = NULL,
+  source_code = NULL,
+  navbar = NULL,
+  orientation = c("columns", "rows"),
+  vertical_layout = c("fill", "scroll"),
+  storyboard = FALSE,
+  theme = "default",
+  highlight = "default",
+  mathjax = "default",
+  extra_dependencies = NULL,
+  css = NULL,
+  includes = NULL,
+  lib_dir = NULL,
+  md_extensions = NULL,
+  pandoc_args = NULL,
+  devel = FALSE,
+  resize_reload = TRUE,
+  ...
+)
 }
 \arguments{
 \item{Def_html}{Default html to use. Add own one here: paste0( find.package("flexdashboard"), "/rmarkdown/templates/flex_dashboard/resources")}
@@ -38,10 +58,6 @@ if a numeric vector of length 2, creates a mobile figure with the
 specified width and height.}
 
 \item{dev}{Graphics device to use for figure output (defaults to png)}
-
-\item{smart}{Produce typographically correct output, converting straight
-quotes to curly quotes, \code{---} to em-dashes, \code{--} to en-dashes, and
-\code{...} to ellipses.}
 
 \item{self_contained}{Produce a standalone HTML file with no external
 dependencies, using data: URIs to incorporate the contents of linked
@@ -102,19 +118,19 @@ copied into the output directory). You can pass an alternate URL or pass
 \code{NULL} to exclude MathJax entirely.}
 
 \item{extra_dependencies}{Additional function arguments to pass to the
-base R Markdown HTML output formatter \code{\link{html_document_base}}}
+base R Markdown HTML output formatter \code{\link[rmarkdown]{html_document_base}}}
 
 \item{css}{One or more css files to include}
 
 \item{includes}{Named list of additional content to include within the
-document (typically created using the \code{\link{includes}} function).}
+document (typically created using the \code{\link[rmarkdown]{includes}} function).}
 
 \item{lib_dir}{Directory to copy dependent HTML libraries (e.g. jquery,
 bootstrap, etc.) into. By default this will be the name of the document with
 \code{_files} appended to it.}
 
 \item{md_extensions}{Markdown extensions to be added or removed from the
-default definition or R Markdown. See the \code{\link{rmarkdown_format}} for
+default definition or R Markdown. See the \code{\link[rmarkdown]{rmarkdown_format}} for
 additional details.}
 
 \item{pandoc_args}{Additional command line options to pass to pandoc}

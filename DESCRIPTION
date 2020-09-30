@@ -34,4 +34,4 @@ Remotes:
   rstudio/rmarkdown
 LazyData: TRUE
 License: MIT + file LICENSE
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.1
